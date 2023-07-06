@@ -242,3 +242,35 @@ button {
   background-color: rgba(255, 255, 255, 0.2);
   font-size: 12px;
 }
+
+@media screen and (max-width: 768px) {
+  
+  body {
+    flex-direction: column-reverse;
+  }
+
+  body * {
+    justify-content: center;
+  }
+
+  #instructions {
+    width: 100%;
+  }
+
+  #content {
+    align-self: center;
+    top: 0;
+    width: 50vw;
+    height: 50vw;
+    min-width: 300px;
+    min-height: 300px;
+    max-width: 100vh;
+    max-height: 100vh;
+    overflow: hidden;
+    border-radius: 0 0 10px 10px;
+  }
+
+  .credits {    
+    
+  }
+}
