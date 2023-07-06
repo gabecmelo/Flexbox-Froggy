@@ -11,6 +11,7 @@ body {
   background-color: rgb(67, 160, 71);
   color: rgba(255, 255, 255, 0.8);
   font-style: 'PT Sans', sans-serif;
+  overflow: hidden;
 }
 
 div {
@@ -109,7 +110,7 @@ textarea {
 #content {
   position: relative;
   width: 50vw;
-  height: 50vw;
+  height: 48.7vw;
 }
 
 #pond,
@@ -270,7 +271,7 @@ button {
     border-radius: 0 0 10px 10px;
   }
 
-  .credits {    
-    
+  body {
+    overflow: auto;
   }
 }
