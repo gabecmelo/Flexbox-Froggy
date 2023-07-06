@@ -1,5 +1,3 @@
-import './style.css'
-
 window.onload = () => {
 	const textArea = document.querySelector('#textArea');
 	const button = document.querySelector('#finalize');
@@ -9,30 +7,6 @@ window.onload = () => {
 	const justifyContent = document.querySelector('#justify-content');
 	const alignItems = document.querySelector('#align-items');
 	const flexDirection = document.querySelector('#flex-direction');
-
-	const textosDicas = [justifyContent, alignItems, flexDirection];
-	let dicaAtualmenteExibida = null;
-
-	dica.forEach((elementDica) => elementDica.addEventListener('click', (event) => {
-		const dicaEncontrada = textosDicas.find((dica) => elementDica.textContent === dica.id);
-		if (dicaAtualmenteExibida) {
-			dicaAtualmenteExibida.style.display = 'none';
-		}
-    
-		dicaEncontrada.style.display = 'flex';
-		dicaAtualmenteExibida = dicaEncontrada;
-		document.addEventListener('click', fecharDica);
-		event.stopPropagation();
-	}));
-
-	const fecharDica = (event) => {
-		const cliqueDentroDasDicas = textosDicas.some((dica) => dica.contains(event.target));
-		if (!cliqueDentroDasDicas) {
-			textosDicas.forEach((dica) => {
-				dica.style.display = 'none';
-			});
-			dicaAtualmenteExibida = null;
-		}
 
 		const verifyCss = () => {
 			const pond = document.querySelector('#pond');
@@ -63,5 +37,29 @@ window.onload = () => {
 		button.addEventListener('click', () => {
 			if (verifyCss()) alert('pode terminar');
 		});
+
+	const textosDicas = [justifyContent, alignItems, flexDirection];
+	let dicaAtualmenteExibida = null;
+
+	dica.forEach((elementDica) => elementDica.addEventListener('click', (event) => {
+		const dicaEncontrada = textosDicas.find((dica) => elementDica.textContent === dica.id);
+		if (dicaAtualmenteExibida) {
+			dicaAtualmenteExibida.style.display = 'none';
+		}
+    
+		dicaEncontrada.style.display = 'flex';
+		dicaAtualmenteExibida = dicaEncontrada;
+		document.addEventListener('click', fecharDica);
+		event.stopPropagation();
+	}));
+
+	const fecharDica = (event) => {
+		const cliqueDentroDasDicas = textosDicas.some((dica) => dica.contains(event.target));
+		if (!cliqueDentroDasDicas) {
+			textosDicas.forEach((dica) => {
+				dica.style.display = 'none';
+			});
+			dicaAtualmenteExibida = null;
+		}
 	};
 };
