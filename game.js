@@ -1,3 +1,5 @@
+import './style.css'
+
 window.onload = () => {
 	const textArea = document.querySelector('#textArea');
 	const button = document.querySelector('#finalize');
