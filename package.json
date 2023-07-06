@@ -1,8 +1,13 @@
 {
   "scripts": {
-    "dev": "vite --open"
+    "dev": "vite --open",
+    "build": "vite build",
+    "fix": "eslint --fix ./"
   },
   "dependencies": {
     "vite": "^4.4.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.44.0"
   }
 }
