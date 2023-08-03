@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flexbox Froggy do Gab</title>
+</head>
+
+<body>
+  <section id="instructions">
+    <header>
+      <h1>Flexbox Froggy</h1>
+    </header>
+    <p class="instructions">Traga os sapos para casa usando as propriedades CSS que você conhece:
+    <ul>
+      <li><code class="help">justify-content</code></li>
+      <div class="hint" id="justify-content">
+        <code>Alinha os itens flexíveis ao longo do eixo principal.</code>
+        <div>
+          <code class="specs">flex-start(default)</code>
+          <code class="specs">flex-end</code>
+          <code class="specs">center</code>
+          <code class="specs">space-between</code>
+          <code class="specs">space-around</code>
+          <code class="specs">space-evenly</code>
+        </div>
+      </div>
+      <li><code class="help">align-items</code></li>
+      <div class="hint" id="align-items">
+        <code>Alinha os itens flexíveis ao longo do eixo transversal.</code>
+        <div>
+          <code class="specs">flex-start</code>
+          <code class="specs">flex-end</code>
+          <code class="specs">center</code>
+          <code class="specs">baseline</code>
+          <code class="specs">stretch(default)</code>
+        </div>
+      </div>
+      <li><code class="help">flex-direction</code></li>
+      <div class="hint" id="flex-direction">
+        <code>Define a direção do eixo principal.</code>
+        <div>
+          <code class="specs">row</code>
+          <code class="specs">row-reverse</code>
+          <code class="specs">column</code>
+          <code class="specs">column-reverse</code>
+        </div>
+      </div>
+      <li><code class="help">order</code></li>
+      <li><code class="help">align-self</code></li>
+      <li><code class="help">flex-wrap</code></li>
+      <li><code class="help">flex-flow</code></li>
+      <li><code class="help">align-content</code></li>
+    </ul>
+    </p>
+    <section class="code">
+      <div class="css">
+        <section class="line-numbers">
+          1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10
+        </section>
+        <pre class="beforeArea">#pond {
+  display: flex;</pre>
+        <textarea id="textArea" autofocus autocapitalize="none"></textarea>
+        <pre class="afterArea">}</pre>
+        <button id="finalize" class="disabled">Finalizar</button>
+      </div>
+    </section>
+
+    <section class="credits">
+      <span id="labelFooter">Esse site foi criado por </span>
+      <a class="social-medias" target="_blank" href="https://www.instagram.com/https.gabbee/">Gabecmelo</a> •
+      <a class="social-medias" target="_blank" href="https://github.com/gabecmelo">GitHub</a> •
+      <a class="social-medias" target="_blank" href="https://www.linkedin.com/in/gabrielc-melo/">LinkedIn</a> •
+      <span><a class="portfolio" target="_blank" href="https://gabecmelo.github.io/">Portfólio</a></span>
+    </section>
+
+    <section class="credits">
+      <span id="flexbox-froggy">O site foi baseado no </span>
+      <a class="froggy" target="_blank" href="https://flexboxfroggy.com/">FlexBox Froggy.</a>
+    </section>
+
+  </section>
+  <section id="content">
+    <div id="layout">
+      <div id="pond">
+
+        <section class="frog-container">
+          <div class="frog red"></div>
+        </section>
+        <section class="frog-container">
+          <div class="frog green"></div>
+        </section>
+        <section class="frog-container">
+          <div class="frog green"></div>
+        </section>
+        <section class="frog-container">
+          <div class="frog green"></div>
+        </section>
+        <section class="frog-container">
+          <div class="frog green"></div>
+        </section>
+        <section class="frog-container">
+          <div class="frog yellow"></div>
+        </section>
+        <section class="frog-container">
+          <div class="frog yellow"></div>
+        </section>
+
+      </div>
+      <div id="background">
+
+        <section class="lilypad-container">
+          <div class="lilypad red" style="transform: scale(0.88) rotate(322deg);"></div>
+        </section>
+
+        <section class="lilypad-container">
+          <div class="lilypad green" style="transform: scale(0.82) rotate(122deg);"></div>
+        </section>
+
+        <section class="lilypad-container">
+          <div class="lilypad green" style="transform: scale(0.93) rotate(238deg);"></div>
+        </section>
+
+        <section class="lilypad-container">
+          <div class="lilypad green" style="transform: scale(0.85) rotate(221deg);"></div>
+        </section>
+
+        <section class="lilypad-container">
+          <div class="lilypad green" style="transform: scale(0.90) rotate(167deg);"></div>
+        </section>
+
+        <section class="lilypad-container">
+          <div class="lilypad yellow" style="transform: scale(0.81) rotate(280deg);"></div>
+        </section>
+
+        <section class="lilypad-container">
+          <div class="lilypad yellow" style="transform: scale(0.87) rotate(68deg);"></div>
+        </section>
+      </div>
+    </div>
+  </section>
+
+  <script src="game.js" type="module"></script>
+</body>
+
+</html>

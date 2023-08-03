@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@700&family=Source+Code+Pro:ital,wght@0,300;0,400;0,500;1,200&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(67, 160, 71);
+  color: rgba(255, 255, 255, 0.8);
+  font-style: 'PT Sans', sans-serif;
+  overflow: hidden;
+}
+
+div {
+  display: block;
+}
+
+#instructions {
+  width: 50%;
+  padding: 30px;
+}
+
+header {
+  display: flex;
+}
+
+h1 {
+  text-transform: uppercase;
+  font-family: 'Fredoka', sans-serif;
+  font-size: 30px;
+  margin: 0;
+}
+
+ul,
+p {
+  margin: 0;
+}
+
+p {
+  display: block;
+  padding: 16px 0px 15px;
+}
+
+.help {
+  font-family: 'Source Code Pro', monospace;
+  font-weight: 600;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-bottom: rgba(255, 255, 255, 0.8) solid 1px;
+  padding: 0 2px;
+  line-height: 1.5;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.code {
+  font-family: 'Source Code Pro', monospace;
+  line-height: 1.5;
+  color: rgb(119, 119, 119);
+  display: block;
+}
+
+.css {
+  position: relative;
+  background-color: rgb(224, 224, 224);
+  border-radius: 4px;
+  padding: 10px 10px 10px 40px;
+  overflow: hidden;
+  height: 260px;
+}
+
+.line-numbers {
+  position: absolute;
+  background-color: rgb(153, 153, 153);
+  top: 0;
+  left: 0;
+  padding: 10px 6px;
+  height: 100%;
+  text-align: right;
+  color: rgb(213, 213, 213);
+}
+
+pre {
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+textarea {
+  font-family: 'Source Code Pro', monospace;
+  font-size: 16px;
+  display: block;
+  width: calc(100% - 16px);
+  outline: none;
+  resize: none;
+  border: none;
+  overflow: auto;
+  height: calc(40% - 12px);
+  margin-left: 16px;
+}
+
+#background,
+#pond {
+  margin: 0;
+  padding: 16px;
+}
+
+#content {
+  position: relative;
+  width: 50vw;
+  height: 48.7vw;
+}
+
+#pond,
+#background {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+#background {
+  top: 0;
+  left: 0;
+  background-color: rgb(31, 87, 104);
+  border-radius: 0 0 0 10px;
+  z-index: 10;
+  flex-flow: column-reverse wrap-reverse;
+  place-content: space-between center;
+}
+
+#pond {
+  top: 0;
+  left: 0;
+  z-index: 20;
+}
+
+button {
+  position: absolute;
+  right: 17px;
+  bottom: 17px;
+  display: inline-block;
+  background-color: rgb(209, 22, 6);
+  color: rgb(255, 255, 255);
+  font-family: 'PT Sans', sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+  border: none;
+  border-radius: 5px;
+  padding: 7px 14px;
+  cursor: pointer;
+}
+
+#finalize.disabled {
+  opacity: 0.5;
+}
+
+.animation {
+  animation: tada 1s, pulse 2s infinite 2s;
+}
+
+.lilypad-container,
+.frog-container {
+  width: 20%;
+  height: 20%;
+}
+
+.lilypad,
+.frog {
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.frog {
+  background-size: 70%;
+}
+
+.lilypad.red {
+  background-image: url(images/lilypad-red.svg);
+}
+
+.lilypad.green {
+  background-image: url(images/lilypad-green.svg);
+}
+
+.lilypad.yellow {
+  background-image: url(images/lilypad-yellow.svg);
+}
+
+.frog.red {
+  background-image: url(images/frog-red.svg);
+}
+
+.frog.green {
+  background-image: url(images/frog-green.svg);
+}
+
+.frog.yellow {
+  background-image: url(images/frog-yellow.svg);
+}
+
+.credits {
+  margin-top: 20px;
+  line-height: 1.5;
+  text-align: center;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.social-medias,
+.froggy {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.portfolio {
+  display: inline-block;
+  padding: 3px 12px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
+  color: rgb(255, 255, 255);
+  user-select: none;
+  text-decoration: none;
+}
+
+.hint {
+  display: none;
+  flex-wrap: wrap;
+  max-width: 20%;
+  background-color: rgb(44, 62, 80);
+  padding: 10px;
+  border-radius: 5px;
+  position: absolute;
+}
+
+.specs {
+  font-family: 'Source Code Pro', monospace;
+  font-weight: 600;
+  background-color: rgba(255, 255, 255, 0.2);
+  font-size: 12px;
+}
+
+@media screen and (max-width: 768px) {
+  
+  body {
+    flex-direction: column-reverse;
+  }
+
+  body * {
+    justify-content: center;
+  }
+
+  #instructions {
+    width: 100%;
+  }
+
+  #content {
+    align-self: center;
+    top: 0;
+    width: 50vw;
+    height: 50vw;
+    min-width: 300px;
+    min-height: 300px;
+    max-width: 100vh;
+    max-height: 100vh;
+    overflow: hidden;
+    border-radius: 0 0 10px 10px;
+  }
+
+  body {
+    overflow: auto;
+  }
+}
