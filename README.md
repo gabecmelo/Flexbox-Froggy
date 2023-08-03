@@ -8,7 +8,8 @@ Este é um projeto pessoal que consiste em uma cópia do jogo educativo "Flexbox
 
 Você pode acessar o projeto através deste [link](https://gabecmelo.github.io/Flexbox-Froggy/).
 
-<img width="75%" src="/images/ScreenshotExample.png" alt="Flexbox Froggy Screenshot">
+## Preview
+<img style="width: 75%;" src="/images/ScreenshotExample.png" alt="Flexbox Froggy Screenshot">
 
 ## Como Jogar
 
